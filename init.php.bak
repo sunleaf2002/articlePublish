@@ -1,0 +1,6 @@
+﻿
+<?php
+$conn=new mysqli("localhost","root","root99","newspublish");//链接数据库
+$conn->set_charset("utf8");
+ 
+
