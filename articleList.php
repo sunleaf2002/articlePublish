@@ -34,7 +34,7 @@
    //$count= (int)mysql_num_rows($result);
    $arr=$res->fetch_assoc();
    while(list($key,$val)=each($arr)){
-    $count = (int)$val; 
+    $count = (int)$val;     
    }
    //echo $count;
    $pageSize=4;
@@ -43,14 +43,14 @@
    //echo $page;
    if(isset($_GET['page']))
    {
-    //$currentPage = $_GET['page'];
-    if($_GET['page'] <=1){
+    $currentPage = $_GET['page'];
+    /*if($_GET['page'] <=1){
      $currentPage = 1;
     }elseif ($_GET['page'] >= $page){
      $currentPage = $page-1;
     }else{
      $currentPage = $_GET['page'];
-    }
+    }*/
    }else
    {
     $currentPage=1;

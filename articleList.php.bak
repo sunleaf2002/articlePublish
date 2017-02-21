@@ -34,7 +34,7 @@
    //$count= (int)mysql_num_rows($result);
    $arr=$res->fetch_assoc();
    while(list($key,$val)=each($arr)){
-    $count = (int)$val; 
+    $count = (int)$val;     
    }
    //echo $count;
    $pageSize=4;
@@ -57,7 +57,7 @@
    }
    $start = ($currentPage-1)*$pageSize;
    $sql="select id,title,content from article where title like '%$keyword%' or content like '%$keyword%' limit $start,$pageSize";
-   echo $sql;
+   //echo $sql;
    $re=$conn->query($sql);//执行sql语句  
  
   while( $arr=$re->fetch_assoc() ){
